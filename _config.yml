@@ -84,3 +84,5 @@ highlighter: rouge
 
 # Remote theme
 remote_theme: carpentries/carpentries-theme
+
+theme: jekyll-theme-slate
