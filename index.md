@@ -8,10 +8,5 @@ describes the history of the shell, basic commands, and some of the philosophy t
 a powerful tool.  This lesson aims to supplement the material in that lesson with short topical
 lessons on particular shell features that are useful to researchers.
 
-> ## Prerequisites
->
-> All of this material assumes that learners have mastered
-> the basic [Unix Shell](http://swcarpentry.github.io/shell-novice/) lesson.  
-{: .prereq}
 
 {% include links.md %}
