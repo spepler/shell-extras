@@ -6,7 +6,7 @@
 carpentry: "incubator"
 
 # Overall title for pages.
-title: "Extra Unix Shell Material"
+title: "Unix Shell"
 
 # Contact.  This *must* include the protocol: if it's an email
 # address, it must look like "mailto:lessons@software-carpentry.org",

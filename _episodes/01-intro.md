@@ -16,12 +16,6 @@ automating repetitive tasks, and its capacity to access networked machines."
 - "The shell's main disadvantages are its primarily textual nature and how
 cryptic its commands and operation can be."
 ---
-### Check the setup
-
-The only tools you need for this are a terminal window and an text editor.
-
-- [install_shell]: https://carpentries.github.io/workshop-template/#shell
-- We need a plain text editor not a word processor. Notepad on Windows or textedit on Mac are fine, but plenty of others are avaliable.  
 
 ### Background
 
@@ -45,7 +39,7 @@ With the proper commands, the shell can repeat tasks with or without some modifi
 as many times as we want.
 Using the shell, the task in the literature example can be accomplished in seconds.
 
-![Most of how shell works is inherited from a time before the GUI!](../fig/80s-terminal.svg)
+![Most of how shell works is inherited from a time before the GUI!](../fig/80s-terminal.jpg)
 
 ### The Shell
 
