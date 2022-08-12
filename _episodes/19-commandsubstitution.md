@@ -204,9 +204,12 @@ loops.
 > whose name contains the time stamp. Test it by executing the command a
 > few times, waiting a few seconds between invocations (use the arrow-up
 > key to avoid having to retype the command)
-> > cp file file.$(date +"%Y-%m-%d_%T") 
+> > ## Solution
+> > ~~~
+> > $ cp file file.$(date +"%Y-%m-%d_%T") 
+> > ~~~
 > {: .solution}
-{: .challenge}{: .challenge}
+{: .challenge}
 
 > ## Juggling filename extensions 
 >
@@ -238,7 +241,12 @@ loops.
 > $ sort ammonia.pdb > ammonia.sorted
 > ~~~
 > but for *each* of the `.pdb`-files.
-> >  for file in *.pdb; do sort $file > $(basename $file .pdb).sorted; done 
+> > ## Solution
+> > 
+> > ~~~
+> >  $ for file in *.pdb; do sort $file > $(basename $file .pdb).sorted; done 
+> > ~~~
+> > {: .bash}
 > {: .solution}
 {: .challenge}
 
