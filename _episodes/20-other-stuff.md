@@ -61,12 +61,6 @@ Have a look at the following address in a web browser. Note it's not a http addr
 
 
 
-### I'm a terminal based editor get me out of here!
 
-Some editors use the terminal window.
-The default editor used by some commands means you need to know how to get out of them sometimes. 
-If you are not used to them you can get stuck.
-Emacs – get out with ^X ^C   (maybe need ^G^X^C)
-Vi – get out with escape, then :q! then enter. 
 
 

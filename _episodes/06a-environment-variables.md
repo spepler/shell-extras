@@ -9,10 +9,12 @@ objectives:
 - "Explain how the shell uses the `PATH` variable to search for executables"
 - "Read the value of an existing variable"
 - "Create new variables and change their values"
+- "Understand child process and the export of variables"
 keypoints:
 - "Shell variables are by default treated as strings"
 - "The `PATH` variable defines the shell's search path"
 - "Variables are assigned using \"`=`\" and recalled using the variable's name prefixed by \"`$`\""
+- "Only exported variables make it into the environment of child processes"
 ---
 
 The shell is just a program, and like other programs, it has variables.
@@ -213,9 +215,39 @@ in your favorite search engine.
 
 A running command is called a process. All processes are created by other processes. Most of the time you are using
 your running `bash` process to launch processes by typeing commands. Each of these processs can be 
-called a *child process* of your `bash` shell pprocess. Remember our pipe and filter example, let's put the `bash` process in the picture too.
+called a *child process* of your `bash` shell pprocess. A child process is started with all the variables marked for export in the parent process.
+Remember our pipe and filter example, let's put the `bash` process in the picture too.
 
 ![Child process](../fig/child_process.png)
 
+
+You can see the effect of using export by starting a child `bash` process. First let's set two variables, one exported and the other not.
+
+~~~
+$ export X="Hello, anyone there?"
+$ Y="I'm over here."
+$ echo $X $Y
+~~~
+{: .bash}
+
+~~~
+Hello, anyone there? I'm over here.
+~~~
+{: .output}
+
+Now let's start the child process and echo the same variables.
+
+~~~
+$ bash
+$ echo $X $Y
+~~~
+{: .bash}
+
+~~~
+Hello, anyone there?
+~~~
+{: .output}
+
+The `Y` variable was not exported to the child `bash` process.
 
 {% include links.md %}
