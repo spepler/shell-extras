@@ -174,7 +174,7 @@ output works best within single commands and whitespace- or
 newline-separated words works best for lists over which to iterate in
 loops.
 
-> ## Generating filenames based on a timestamp {.challenge}
+> ## Generating filenames based on a timestamp 
 > 
 > It can be useful to create the filename 'on the fly'. For instance, if
 > some program called `qualitycontrol` is run periodically (or
@@ -208,8 +208,8 @@ loops.
 > {: .solution}
 {: .challenge}{: .challenge}
 
-## Juggling filename extensions {.challenge}
-
+> ## Juggling filename extensions 
+>
 > When running an analysis program with a certain input file, it
 > is often required that the output has the same name as the input, but with
 > a different filename extension, e.g.
