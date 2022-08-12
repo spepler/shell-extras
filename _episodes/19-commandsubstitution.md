@@ -1,14 +1,15 @@
 ---
-layout: page
-title: The Unix Shell
-subtitle: Command Subsitution
-minutes: 15
+title: Command Subsitution
+teaching: 20 minutes
+exercises: 0
+questions:
+- How do I loop over the content of a file?
+- How do I feed the files I have found to a program expecting arguments rather than Standard input.
+keypoints:
+- Generate the values of the arguments on the fly using command substitution
+- Command substitution can be done via `$(...)` or via `\``
+- Use xargs to feed commands that are expecting argument lists 
 ---
-> ## Learning Objectives {.objectives}
->
-> * Understand the need for flexibility regarding arguments
-> * Generate the values of the arguments on the fly using command substitution
-> * Understand the difference between pipes/redirection, and the command substitution operator
 
 ## Introduction
 
@@ -203,8 +204,9 @@ loops.
 > whose name contains the time stamp. Test it by executing the command a
 > few times, waiting a few seconds between invocations (use the arrow-up
 > key to avoid having to retype the command)
-<!-- solution: cp file file.$(date +"%Y-%m-%d_%T") -->
-
+> > cp file file.$(date +"%Y-%m-%d_%T") 
+> {: .solution}
+{: .challenge}{: .challenge}
 
 ## Juggling filename extensions {.challenge}
 
@@ -236,7 +238,36 @@ loops.
 > $ sort ammonia.pdb > ammonia.sorted
 > ~~~
 > but for *each* of the `.pdb`-files.
-<!-- solution: for file in *.pdb; do sort $file > $(basename $file .pdb).sorted; done -->
+> >  for file in *.pdb; do sort $file > $(basename $file .pdb).sorted; done 
+> {: .solution}
+{: .challenge}
+
+### xargs
+
+This does not work
+$ find acsoe | ls
+acsoe		presentations
+$ 
+
+Find pipes a list of files to ls.
+ls ignores input and just does a normal listing of the current working directory.
+Lots of commands expect a list of arguments, not standard input. Is there anything to help?
+
+
+The "xargs" command runs the same command on all files specified in the input.
+Usually used with "find" output, e.g.:
+find . -name '*.nc' | xargs chmod u=rwx
+Changes permissions on all .nc files.
+
+by default splits the file list into batches:
+chmod 644 file1 file2 … file100
+chmod 644 file101 file102 … 
+use "-n 1" if the command can only process one file at a time:
+find . -name '*.tar' | xargs -n 1 tar -tvf
+displays contents of all 'tar' files found
+
+
+Use find piped to xargs to do something (wc, ls –l , head -1, etc)
 
 ## Closing remarks
 

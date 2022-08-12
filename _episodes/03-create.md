@@ -961,7 +961,7 @@ or specifying a naming pattern using wildcards.
 > {: .solution}
 {: .challenge}
 
-> ### I'm a terminal based editor get me out of here!
+> ## I'm a terminal based editor get me out of here!
 > 
 > Some other editors use the terminal window, like `nano`, however they are not always as helpful in telling 
 > you how to use them. This can mean you accidentilly get stuck in the editor!  
@@ -971,7 +971,7 @@ or specifying a naming pattern using wildcards.
 > Vi – get out by pressing the <kbd>esc</kbd>, then <kbd>:</kbd>,  then <kbd>q</kbd><kbd>!</kbd> <kbd>enter</kbd>. 
 {: .callout}
 
-> ### Pattern matching: globs
+> ## Pattern matching: globs
 > 
 > Unix shells recognises various wildcards in filenames. We have seen these two:
 > * matches any number of characters
