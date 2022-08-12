@@ -1,6 +1,6 @@
 ---
 title: "Loops"
-teaching: 40
+teaching: 30
 exercises: 10
 questions:
 - "How can I perform the same actions on many different files?"

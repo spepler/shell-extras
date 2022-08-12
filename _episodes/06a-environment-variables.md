@@ -223,31 +223,36 @@ Remember our pipe and filter example, let's put the `bash` process in the pictur
 
 You can see the effect of using export by starting a child `bash` process. First let's set two variables, one exported and the other not.
 
-~~~
-$ export X="Hello, anyone there?"
-$ Y="I'm over here."
-$ echo $X $Y
-~~~
-{: .bash}
-
-~~~
-Hello, anyone there? I'm over here.
-~~~
-{: .output}
-
-Now let's start the child process and echo the same variables.
-
-~~~
-$ bash
-$ echo $X $Y
-~~~
-{: .bash}
-
-~~~
-Hello, anyone there?
-~~~
-{: .output}
-
-The `Y` variable was not exported to the child `bash` process.
+> ## Export control
+> 
+> ~~~
+> $ export X="Hello, anyone there?"
+> $ Y="I'm over here."
+> $ echo $X $Y
+> ~~~
+> {: .bash}
+> 
+> ~~~
+> Hello, anyone there? I'm over here.
+> ~~~
+> {: .output}
+> 
+> Start a `bash` child process and echo the same variables.
+> 
+> > ~~~
+> > $ bash
+> > $ echo $X $Y
+> > ~~~
+> > {: .bash}
+> > 
+> > ~~~
+> > Hello, anyone there?
+> > ~~~
+> > {: .output}
+> > 
+> > The `Y` variable was not exported to the child `bash` process.
+> > ## Solution
+> > {: .solution}
+> {: .challenge}
 
 {% include links.md %}
