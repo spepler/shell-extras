@@ -961,4 +961,39 @@ or specifying a naming pattern using wildcards.
 > {: .solution}
 {: .challenge}
 
+
+
+> ### Pattern matching: globs
+> 
+> Unix shells recognises various wildcards in filenames. We have seen these two:
+> * matches any number of characters
+> ? matches one character
+> These filename matching patterns, known as "globs", are replaced with a list of matching filenames before the command is executed.
+> $ ls
+> 1	3	5	a1	b1	c1	d1
+>   4	a	b	c	d
+> 
+> $ ls *1
+> a1 b1	c1	d1
+> 
+> $ ls ??
+> a1 b1 c1	d1
+> 
+> 
+> Here is another glob for you
+> […] matches any of the characters listed (or range of characters, e.g. [0-9])
+> 
+> $ ls [a-c]*
+> a a1 b b1 c c1
+> 
+> And another glob
+> {fred, barny, wilma} matches any of the comma separated names listed.
+> For example ls *.{jpg,png} will list all your jpg and png files.
+> 
+> 
+> Use glob matching in acsoe/freetex-98/jungfrau
+> Make a for loop that word counts only files from that date range 
+> 
+{: .callout}
+
 {% include links.md %}

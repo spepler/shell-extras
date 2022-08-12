@@ -1,7 +1,7 @@
 
 ---
 title: "Transferring Files"
-teaching: 10
+teaching: 20
 exercises: 0
 questions:
 - "How to use wget, curl and lftp to transfer file?"
@@ -198,6 +198,29 @@ $ lftp -c mget http://carpentries-incubator.github.io/shell-extras/*.html
 {: .bash}
 
 Please refer to the man page by typing `man lftp` in the shell for more information.
+
+### rsync
+
+copies files over the network (or locally)
+where destination files already exist, copies only what is required to update any differences
+push / pull files over ssh:
+rsync user@host:remote_path local_path	← pull
+rsync local_path user@host:remote_path	← push
+requires no special configuration (though remember to set up ssh keys)
+similar to scp syntax, e.g. remote path is relative to home directory unless starts with /
+
+Useful flags for rsync:
+-r (recursive) – go down the directory tree copying stuff.
+-c (checksum) – when deciding what files to send, look not only at size and timestamp but if necessary also file contents
+--delete  – remove files from destination not present at source end.  (Test with -n first!)
+-v (verbose) – list files that are transferred (or deleted)
+-n (dry run) – go through the motions but do not actually transfer (or delete) files. Useful with -v.
+-a (archive) – copy recursively and try to copy permissions, ownership, etc.
+
+Copy the data in the acsoe directory to an acsoe2 directory with rsync. Use the –v (verbose) option so you can see what is happening.
+Run the command again and note what is copied.
+Add a new file to acsoe directory, modify another file and delete a third. Run the command a third time. 
+Try rsync to the remote machine used in the scp exercise. 
 
 {% include links.md %}
 

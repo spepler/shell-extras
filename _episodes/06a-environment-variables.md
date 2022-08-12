@@ -209,4 +209,13 @@ You can find interesting suggestions for other aliases
 and other bash tricks by searching for "sample bashrc"
 in your favorite search engine.
 
+## Child Processes and `export`
+
+A running command is called a process. All processes are created by other processes. Most of the time you are using
+your running `bash` process to launch processes by typeing commands. Each of these processs can be 
+called a *child process* of your `bash` shell pprocess. Remember our pipe and filter example, let's put the `bash` process in the picture too.
+
+![Child process](../fig/child_process.png)
+
+
 {% include links.md %}
