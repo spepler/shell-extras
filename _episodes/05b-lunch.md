@@ -1,5 +1,5 @@
 ---
-title: "Get some Coffee/Tea"
+title: "Lunch"
 teaching: 60
 exercises: 0
 objectives:
