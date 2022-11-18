@@ -10,12 +10,15 @@ keypoints:
 - "Course logistics."
 ---
 
-### Zoom
+### Using Software Carpentry 
 
-TODO
+The lessions are in episodes. 
+I will try to keep to time. I may jump some bits - don't worry you can get at the materials and you can ask us after the course has finished.
 
-### Slack
 
-TODO
+### Zoom and Slack
+
+We use zoom for the main lession and break out rooms for the exercises and help
+
 
 {% include links.md %}
