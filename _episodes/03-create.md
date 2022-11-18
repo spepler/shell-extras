@@ -977,10 +977,12 @@ or specifying a naming pattern using wildcards.
 > * matches any number of characters
 > ? matches one character
 > These filename matching patterns, known as "globs", are replaced with a list of matching filenames before the command is executed.
+> ~~~
 > $ ls
 > 1	3	5	a1	b1	c1	d1
 >   4	a	b	c	d
-> 
+> ~~~
+> {: .language-bash}
 > $ ls *1
 > a1 b1	c1	d1
 > 

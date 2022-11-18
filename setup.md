@@ -13,7 +13,7 @@ You need to download some files to follow this lesson.
    You should end up with a new folder called **`shell-lesson-data`** on your Desktop.
 
 ## Install software
-If you do not already have the shell software installed, you will need to
+On Mac or Linux the program you need will be there by default. If you do not already have the shell software installed, you will need to
 [download and install][install_shell] it.
 
 ## Have a text editor
