@@ -233,6 +233,38 @@ results-2011-11-11.dat              100%  9  1.0 MB/s 00:00
 ~~~
 {: .output}
 
+
+
+> ### rsync
+> 
+> `rsync` copies files over the network (or locally) much like scp. It is however more intelligent in its approch.
+> Where destination files already exist it copies only what is required to update any differences. 
+> You can use it to push / pull files over ssh:
+> ~~~
+> $ rsync user@host:remote_path local_path 
+> ~~~
+> {: .bash}
+> To pull data from a remote host.
+> 
+> ~~~
+> $ rsync local_path user@host:remote_path
+> ~~~
+> {: .bash}
+> To push date to a remote host.
+>
+> As with `scp` it requires no special configuration (though remember to set up ssh keys)
+> and has a very similar syntax, e.g. remote path is relative to home directory unless starts with /
+> 
+> Useful flags for rsync:
+>  - `-r` (recursive) – go down the directory tree copying stuff.
+>  - `-c` (checksum) – when deciding what files to send, look not only at size and timestamp but if necessary also file contents
+>  - `--delete`  – remove files from destination not present at source end.  (Test with -n first!)
+>  - `-v` (verbose) – list files that are transferred (or deleted)
+>  - `-n` (dry run) – go through the motions but do not actually transfer (or delete) files. Useful with -v.
+>  - `-a` (archive) – copy recursively and try to copy permissions, ownership, etc.
+> 
+{: .callout}
+
 ## Running commands on a remote machine using `ssh`
 
 Here's one more thing the `ssh` client program can do for us.
