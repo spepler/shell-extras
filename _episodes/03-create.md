@@ -983,12 +983,16 @@ or specifying a naming pattern using wildcards.
 >   4	a	b	c	d
 > ~~~
 > {: .language-bash}
+> ~~~
 > $ ls *1
 > a1 b1	c1	d1
-> 
+> ~~~
+> {: .language-bash}
+> ~~~
 > $ ls ??
 > a1 b1 c1	d1
-> 
+> ~~~
+> {: .language-bash}
 > 
 > Here is another glob for you
 > […] matches any of the characters listed (or range of characters, e.g. [0-9])
