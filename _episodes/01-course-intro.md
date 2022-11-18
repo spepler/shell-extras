@@ -1,5 +1,5 @@
 ---
-title: "Introducing the Shell"
+title: "Course Logistics and Getting to know people"
 teaching: 20
 exercises: 0
 questions:
