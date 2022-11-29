@@ -1,9 +1,11 @@
 ---
-title: "Course Logistics and Getting to know people 🧭"
+title: "Course Logistics and Getting to know people "
 teaching: 30
 exercises: 0
 questions:
 - "Who are you?"
+- "Who are we?"
+- "Where are we going? 🧭"
 objectives:
 - "Get to know each other and feel comfortable."
 keypoints:
