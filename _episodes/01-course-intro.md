@@ -1,6 +1,6 @@
 ---
 title: "Course Logistics and Getting to know people 🧭"
-teaching: 20
+teaching: 30
 exercises: 0
 questions:
 - "Who are you?"
