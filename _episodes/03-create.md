@@ -157,7 +157,7 @@ data/  results/
 >    expected and can even result in data loss.
 >
 > If you need to refer to names of files or directories that have spaces
-> or other special characters, you should surround the name in quotes (`""`).
+> or other special characters, you should surround the name in quotes (`''`).
 {: .callout}
 
 ### Create a text file
