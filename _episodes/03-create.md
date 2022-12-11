@@ -224,6 +224,16 @@ return to the shell.
 > In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
 > This means that you can use `Control-G` to get help and `Control-O` to save your
 > file.
+>
+> ## Meta Key
+> 
+> The help that you obtain using `Control-G` includes a full list of keyboard shortcuts,
+> of which the ones at the bottom of the screen are only a small selection.  Many of these 
+> use the control key, as in the above examples, but there are some that are shown using 
+> `M-` (for "meta") e.g. `M-/` to go to the last line of the file. Typically this means that you would 
+> press <kbd>Esc</kbd>, then release it and press the other key, e.g. <kbd>Esc</kbd> <kbd>/</kbd>, although 
+> depending on your setup, it might work if instead you press the other key while holding down <kbd>Alt</kbd>.
+
 {: .callout}
 
 `nano` doesn't leave any output on the screen after it exits,
