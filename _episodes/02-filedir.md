@@ -180,6 +180,7 @@ are plain old **files**.
 > If your screen gets too cluttered, you can clear your terminal using the
 > `clear` command. You can still access previous commands using <kbd>↑</kbd>
 > and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
+> You can also clear your terminal by pressing <kbd>ctrl</kbd>-<kbd>L</kbd>.
 {: .callout}
 
 ### Getting help
