@@ -590,9 +590,9 @@ so that you and other people can put those programs into pipes to multiply their
 >
 > 1.  `sort animals.csv | uniq -c`
 > 2.  `sort -t, -k2,2 animals.csv | uniq -c`
-> 3.  `cut -d, -f 2 animals.csv | uniq -c`
-> 4.  `cut -d, -f 2 animals.csv | sort | uniq -c`
-> 5.  `cut -d, -f 2 animals.csv | sort | uniq -c | wc -l`
+> 3.  `cut -d , -f 2 animals.csv | uniq -c`
+> 4.  `cut -d , -f 2 animals.csv | sort | uniq -c`
+> 5.  `cut -d , -f 2 animals.csv | sort | uniq -c | wc -l`
 >
 > > ## Solution
 > > Option 4. is the correct answer.
