@@ -91,14 +91,17 @@ $ ls -F thesis
 ~~~
 {: .language-bash}
 
-Note that `mkdir` is not limited to creating single directories one at a time.
-The `-p` option allows `mkdir` to create a directory with nested subdirectories
-in a single operation:
+Note that `mkdir` is not limited to creating single directories one at a time:
+you can use more than one directory argument.
+Also, the `-p` option (or `--parents`) allows `mkdir` to create a directory with nested subdirectories
+in a single operation. Putting these together, we can do:
 
 ~~~
 $ mkdir -p ../project/data ../project/results
 ~~~
 {: .language-bash}
+Both `../project/data` and `../project/results` are created, and also `../project` 
+is created automatically if needed because we used the `-p` option.
 
 The `-R` option to the `ls` command will list all nested subdirectories within a directory.
 Let's use `ls -FR` to recursively list the new directory hierarchy we just created in the
