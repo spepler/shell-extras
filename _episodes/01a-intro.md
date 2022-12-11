@@ -108,6 +108,11 @@ Documents   Library     Music       Public
 ~~~
 {: .output}
 
+When you log into JASMIN, your current directory will be your home directory on JASMIN
+(until you change to a different directory). The contents are unlikely to be the same as 
+in the above example, but you will see whatever files you have in that directory.  (With a
+brand new JASMIN account, maybe there won't yet be any files for `ls` to show you.)
+
 > ## Command not found
 > If the shell can't find a program whose name is the command you typed, it
 > will print an error message such as:
