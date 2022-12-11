@@ -553,7 +553,7 @@ quotations.txt
 > > Recall that `..` means 'go up a level', so the copied file is now in `/Users/jamie`.
 > > Notice that `..` is interpreted with respect to the current working
 > > directory, **not** with respect to the location of the file being copied.
-> > So, the only thing that will show using ls (in `/Users/jamie/data`) is the recombined folder.
+> > So, the only thing that will show using ls (in `/Users/jamie/data`) is the `recombined` folder.
 > >
 > > 1. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
 > > 2. Yes
