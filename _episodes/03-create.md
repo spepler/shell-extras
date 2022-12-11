@@ -980,8 +980,8 @@ or specifying a naming pattern using wildcards.
 > you how to use them. This can mean you accidentilly get stuck in the editor!  
 > The default editor used by some commands means you need to know how to get out of them sometimes. 
 > If you are not used to them you can get stuck.
-> Emacs – get out with ^X ^C   (maybe need ^G^X^C)
-> Vi – get out by pressing the <kbd>esc</kbd>, then <kbd>:</kbd>,  then <kbd>q</kbd><kbd>!</kbd> <kbd>enter</kbd>. 
+> - Emacs – get out with ^X ^C   (maybe need ^G^X^C)
+> - Vi – get out by pressing the <kbd>esc</kbd>, then <kbd>:</kbd>,  then <kbd>q</kbd><kbd>!</kbd> <kbd>enter</kbd>. 
 {: .callout}
 
 > ## Pattern matching: globs
