@@ -10,7 +10,7 @@ objectives:
 - "Explain what usually happens if a program or pipeline isn't given any input to process."
 - "Explain the advantage of linking commands with pipes and filters."
 keypoints:
-- "`wc` counts lines, words, and characters in its inputs."
+- "`wc` counts lines, words, and bytes in its inputs."
 - "`cat` displays the contents of its inputs."
 - "`sort` sorts its inputs."
 - "`head` displays the first 10 lines of its input."
@@ -54,7 +54,7 @@ $ wc cubane.pdb
 {: .output}
 
 `wc` is the 'word count' command:
-it counts the number of lines, words, and characters in files (from left to right, in that order).
+it counts the number of lines, words, and bytes in files (from left to right, in that order).
 
 If we run the command `wc *.pdb`, the `*` in `*.pdb` matches zero or more characters,
 so the shell turns `*.pdb` into a list of all `.pdb` files in the current directory:
@@ -96,8 +96,8 @@ $ wc -l *.pdb
 ~~~
 {: .output}
 
-The `-m` and `-w` options can also be used with the `wc` command, to show
-only the number of characters or the number of words in the files.
+The `-c` and `-w` options can also be used with the `wc` command, to show
+only the number of bytes or the number of words in the files.
 
 > ## Why Isn't It Doing Anything?
 >
