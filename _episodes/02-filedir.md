@@ -748,7 +748,7 @@ using the term *option*.
 
 Each part is separated by spaces: if you omit the space
 between `ls` and `-F` the shell will look for a command called `ls-F`, which
-doesn't exist. Also, capitalization can be important.
+doesn't exist. Also, capitalization is important.
 For example, `ls -s` will display the size of files and directories alongside the names,
 while `ls -S` will sort the files and directories by size, as shown below:
 
