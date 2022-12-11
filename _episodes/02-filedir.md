@@ -68,6 +68,8 @@ which is Nelle's **home directory**:
 > In future examples, we've used Mac output as the default - Linux and Windows
 > output may differ slightly but should be generally similar.
 >
+> On JASMIN, users' home directories are under `/home/users`.
+>
 > We will also assume that your `pwd` command returns your user's home directory.
 > If `pwd` returns something different, you may need to navigate there using `cd`
 > or some commands in this lesson will not work as written.
