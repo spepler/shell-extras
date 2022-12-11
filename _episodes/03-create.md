@@ -987,8 +987,9 @@ or specifying a naming pattern using wildcards.
 > ## Pattern matching: globs
 > 
 > Unix shells recognises various wildcards in filenames. We have seen these two:
-> * matches any number of characters
-> ? matches one character
+> - `*` matches any number of characters
+> - `?` matches one character
+> 
 > These filename matching patterns, known as "globs", are replaced with a list of matching filenames before the command is executed.
 > ~~~
 > $ ls
