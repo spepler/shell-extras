@@ -64,7 +64,7 @@ commands can be written into a *script*, improving the reproducibility of
 workflows.
 
 In addition, the command line is often the easiest way to interact with remote machines
-and supercomputers.
+and supercomputers, including JASMIN.
 Familiarity with the shell is near essential to run a variety of specialized tools and resources
 including high-performance computing systems.
 As clusters and cloud computing systems become more popular for scientific data crunching,
