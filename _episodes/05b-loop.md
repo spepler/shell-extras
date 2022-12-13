@@ -779,7 +779,8 @@ so she decides to get some coffee and catch up on her reading.
 > > `cat cubane.pdb`, `cat ethane.pdb`, `cat methane.pdb` etc.
 > >
 > > Try both versions for yourself to see the output! Be sure to open the
-> > `all.pdb` file to view its contents.
+> > `all.pdb` file to view its contents. You may wish to delete `all.pdb` before
+> > trying version 2, to remove the output that was added by version 1.
 > {: .solution}
 {: .challenge}
 
