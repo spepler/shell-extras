@@ -215,7 +215,7 @@ $ cp results.dat vlad@backupserver
 {: .bash}
 
 Copying a whole directory betwen remote machines uses the same syntax as the `cp` command:
-we just use the `-r` option to signal that we want copying to be recursively.
+we just use the `-r` option to signal that we want copying to be recursive.
 For example,
 this command copies all of our results from the backup server to our laptop:
 
@@ -237,30 +237,31 @@ results-2011-11-11.dat              100%  9  1.0 MB/s 00:00
 
 > ### rsync
 > 
-> `rsync` copies files over the network (or locally) much like scp. It is however more intelligent in its approch.
-> Where destination files already exist it copies only what is required to update any differences. 
-> You can use it to push / pull files over ssh:
+> `rsync` copies files over the network (or locally) much like scp. It is however more intelligent in its approach.
+> Where destination files already exist, it copies only what is required to update any differences. 
+> You can use it to push / pull files over ssh.
+> 
+> To pull data from a remote host, use:
 > ~~~
 > $ rsync user@host:remote_path local_path 
 > ~~~
 > {: .bash}
-> To pull data from a remote host.
 > 
+> and to push data to a remote host, use:
 > ~~~
 > $ rsync local_path user@host:remote_path
 > ~~~
 > {: .bash}
-> To push date to a remote host.
 >
 > As with `scp` it requires no special configuration (though remember to set up ssh keys)
-> and has a very similar syntax, e.g. remote path is relative to home directory unless starts with /
+> and has a very similar syntax, e.g. remote path is relative to home directory unless starts with `/`
 > 
 > Useful flags for rsync:
 >  - `-r` (recursive) – go down the directory tree copying stuff.
 >  - `-c` (checksum) – when deciding what files to send, look not only at size and timestamp but if necessary also file contents
->  - `--delete`  – remove files from destination not present at source end.  (Test with -n first!)
+>  - `--delete`  – remove files from destination not present at source end.  (Test with `-n` first!)
 >  - `-v` (verbose) – list files that are transferred (or deleted)
->  - `-n` (dry run) – go through the motions but do not actually transfer (or delete) files. Useful with -v.
+>  - `-n` (dry run) – go through the motions but do not actually transfer (or delete) files. Useful with `-v`.
 >  - `-a` (archive) – copy recursively and try to copy permissions, ownership, etc.
 > 
 {: .callout}
