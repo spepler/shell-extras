@@ -608,7 +608,7 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > ## Debugging Scripts
 >
 > Suppose you have saved the following script in a file called `do-errors.sh`
-> in Nelle's `north-pacific-gyre/scripts` directory:
+> in Nelle's `north-pacific-gyre` directory:
 >
 > ~~~
 > # Calculate stats for data files.
