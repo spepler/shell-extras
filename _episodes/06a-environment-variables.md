@@ -201,7 +201,7 @@ For example, we can define the alias `backup`
 to run `/bin/zback` with a specific set of arguments:
 
 ~~~
-alias backup=/bin/zback -v --nostir -R 20000 $HOME $BACKUP_DIR
+alias backup='/bin/zback -v --nostir -R 20000 $HOME $BACKUP_DIR'
 ~~~
 {: .bash}
 
