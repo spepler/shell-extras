@@ -676,7 +676,7 @@ NENE01736A.txt
 {: .output}
 
 1518 times 5 seconds,
-divided by 60,
+divided by 3600,
 tells her that her script will take about two hours to run.
 As a final check,
 she opens another terminal window,
