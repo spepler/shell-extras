@@ -213,7 +213,7 @@ $ grep -n -w -v "the" haiku.txt
 If we use the `-r` (recursive) option,
 `grep` can search for a pattern recursively through a set of files in subdirectories.
 
-Let's search recursively for `Yesterday` in the `shell-lesson-data/exercise-data/writing` directory:
+Let's search recursively for `Yesterday` in the `shell-lesson-data/exercise-data/writing` directory. (Recall that `.` means the current directory.)
 
 ```
 $ grep -r Yesterday .
