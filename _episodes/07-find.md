@@ -542,6 +542,7 @@ $ find . -type f
 ./proteins/cubane.pdb
 ~~~
 {: .output}
+(You should see something similar, but not necessarily in the same order.)
 
 Now let's try matching by name:
 
