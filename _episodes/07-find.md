@@ -664,7 +664,7 @@ $ grep "searching" $(find . -name "*.txt")
 > 4.  None of the above.
 >
 > > ## Solution
-> > Option 1. is correct. Putting the match expression in quotes prevents the shell
+> > Option 1 is correct. Putting the match expression in quotes prevents the shell
 > > expanding it, so it gets passed to the `find` command.
 > >
 > > Option 2 is also works in this instance because the shell tries to expand `*.dat`
@@ -693,7 +693,7 @@ $ grep "searching" $(find . -name "*.txt")
 > formulas?
 >
 > A last option is to recognize that the shell and text processing have
-> their limits, and to use another programming language.
+> their limits, and to use another programming language when appropriate.
 > When the time comes to do this, don't be too hard on the shell: many
 > modern programming languages have borrowed a lot of
 > ideas from it, and imitation is also the sincerest form of praise.
@@ -722,7 +722,7 @@ without thinking about them.'
 > > ## Solution
 > > 1. Find all files with a `.dat` extension recursively from the current directory
 > > 2. Count the number of lines each of these files contains
-> > 3. Sort the output from step 2. numerically
+> > 3. Sort the output from step 2 numerically
 > {: .solution}
 {: .challenge}
 
