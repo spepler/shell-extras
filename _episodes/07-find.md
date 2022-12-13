@@ -29,7 +29,7 @@ It is also the name of a very useful command-line program.
 For our examples,
 we will use a file that contains three haiku taken from a
 1998 competition in *Salon* magazine. For this set of examples,
-we're going to be working in the writing subdirectory:
+we're going to be working in the `writing` subdirectory:
 
 ~~~
 $ cd
