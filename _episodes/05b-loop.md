@@ -367,6 +367,12 @@ or a subset of data.
 > > 3 is the correct answer. `>>` appends to a file, rather than overwriting it with the redirected
 > > output from a command.
 > > Given the output from the `cat` command has been redirected, nothing is printed to the screen.
+> > 
+> > If the `all.pdb` already existed before the loop was executed, then its original contents would remain 
+> > at the start of the file.
+> > If this behaviour is not desirable, then adding `rm -f all.pdb` could be added at the start
+> > of the program, before the `for` loop.
+> > This would ensure that any existing `all.pdb` file is removed first.
 > {: .solution}
 {: .challenge}
 
