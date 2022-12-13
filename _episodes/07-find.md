@@ -325,8 +325,8 @@ Miscellaneous:
 > ~~~
 > {: .source}
 >
-> She wants to write a shell script that takes a species as the first command-line argument
-> and a directory as the second argument. The script should return one file called `<species>.txt`
+> She wants to write a shell script that takes a species (for example `rabbit`) as the first command-line argument
+> and a directory (for example `.`) as the second argument. The script should return one file called `<species>.txt`
 > containing a list of dates and the number of that species seen on each date.
 > For example using the data shown above, `rabbit.txt` would contain:
 >
