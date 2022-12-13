@@ -489,7 +489,7 @@ $ find .
 ./proteins/cubane.pdb
 ~~~
 {: .output}
-
+(You should see something similar, but not necessarily in the same order.)
 
 As always, the `.` on its own means the current working directory,
 which is where we want our search to start.
@@ -542,7 +542,6 @@ $ find . -type f
 ./proteins/cubane.pdb
 ~~~
 {: .output}
-(You should see something similar, but not necessarily in the same order.)
 
 Now let's try matching by name:
 
