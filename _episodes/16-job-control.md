@@ -118,7 +118,7 @@ computer. It isn't as important these days, except that if a process is
 a system service, such as a network monitor, `ps` will display a
 question mark for its terminal, since it doesn't actually have one.
 
-The fourth column, C, is an indication of the perCentage of processor
+The fourth column, C, is an indication of the percentage of processor (CPU)
 utilization.
 
 Your version of `ps` may
@@ -132,7 +132,7 @@ The shell provides several commands for stopping, pausing, and resuming
 processes. To see them in action, let's run our `analyze` program on our
 latest data files. After a few minutes go by, we realize that this is
 going to take a while to finish. Being impatient, we kill the process by
-typing Control-C. This stops the currently-executing program right away.
+pressing Control-C. This stops the currently-executing program right away.
 Any results it had calculated, but not written to disk, are lost.
 
 ~~~
@@ -170,7 +170,7 @@ viscosity: 0.75
 ~~~
 {: .bash}
 
-(Remember, \^D is the shell's way of showing Control-D, which means "end
+(Remember, `^D` is the shell's way of showing Control-D, which means "end
 of input".) Now let's run the `jobs` command, which tells us what
 processes are currently running in the background:
 
@@ -208,7 +208,7 @@ The shell gives us one more tool for job control: if a process is
 already running in the foreground, Control-Z will pause it and return
 control to the shell. We can then use `fg` to resume it in the
 foreground, or `bg` to resume it as a background job. For example, let's
-run `analyze` again, and then type Control-Z. The shell immediately
+run `analyze` again, and then press Control-Z. The shell immediately
 tells us that our program has been stopped, and gives us its job number:
 
 ~~~
@@ -225,7 +225,7 @@ $ ./analyze results01.dat
 If we type `bg %1`, the shell starts the process running again, but in
 the background. We can check that it's running using `jobs`, and kill it
 while it's still in the background using `kill` and the job number. This
-has the same effect as bringing it to the foreground and then typing
+has the same effect as bringing it to the foreground and then pressing
 Control-C:
 
 ~~~
