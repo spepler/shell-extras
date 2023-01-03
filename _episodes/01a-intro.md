@@ -64,7 +64,7 @@ commands can be written into a *script*, improving the reproducibility of
 workflows.
 
 In addition, the command line is often the easiest way to interact with remote machines
-and supercomputers.
+and supercomputers, including JASMIN.
 Familiarity with the shell is near essential to run a variety of specialized tools and resources
 including high-performance computing systems.
 As clusters and cloud computing systems become more popular for scientific data crunching,
@@ -107,6 +107,11 @@ Desktop     Downloads   Movies      Pictures
 Documents   Library     Music       Public
 ~~~
 {: .output}
+
+When you log into JASMIN, your current directory will be your home directory on JASMIN
+(until you change to a different directory). The contents are unlikely to be the same as 
+in the above example, but you will see whatever files you have in that directory.  (With a
+brand new JASMIN account, maybe there won't yet be any files for `ls` to show you.)
 
 > ## Command not found
 > If the shell can't find a program whose name is the command you typed, it

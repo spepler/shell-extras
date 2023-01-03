@@ -14,13 +14,14 @@ keypoints:
 
 ### Using Software Carpentry 
 
-The lessions are in episodes. 
-I will try to keep to time. I may jump some bits - don't worry you can get at the materials and you can ask us after the course has finished.
+The lessons are in episodes. 
+
+I will try to keep to time. I may jump some bits. Don't worry; you can get at the materials and you can ask us after the course has finished.
 
 
 ### Zoom and Slack
 
-We use zoom for the main lession and break out rooms for the exercises and help
+We use zoom for the main lesson, and breakout rooms for the exercises and help.
 
 
 {% include links.md %}

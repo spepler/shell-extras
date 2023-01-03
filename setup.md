@@ -18,7 +18,7 @@ On Mac or Linux the program you need will be there by default. If you do not alr
 
 ## Have a text editor
 We need a plain text editor not a word processor. 
-Notepad on Windows or textedit on Mac are fine, but plenty of others are avaliable.
+Notepad on Windows or textedit on Mac are fine, but plenty of others are available.
 
 ## Open a new shell
 After installing the software

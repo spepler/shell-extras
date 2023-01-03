@@ -78,7 +78,7 @@ or execute the file
 For example, if a file had the following set of permissions:
 
 <table class="table table-striped">
-<tr><td></td><th>user</th><th>group</th><th>all</th></tr>
+<tr><td></td><th>user</th><th>group</th><th>other</th></tr>
 <tr><th>read</th><td>yes</td><td>yes</td><td>no</td></tr>
 <tr><th>write</th><td>yes</td><td>no</td><td>no</td></tr>
 <tr><th>execute</th><td>no</td><td>no</td><td>no</td></tr>
@@ -156,8 +156,8 @@ This shows the file's permissions, i.e., who can read, write, or execute it.
 Let's have a closer look at one of those permission strings:
 `-rwxr-xr-x`.
 The first character tells us what type of thing this is:
-'-' means it's a regular file,
-while 'd' means it's a directory,
+`-` means it's a regular file,
+while `d` means it's a directory,
 and other characters mean more esoteric things.
 
 The next three characters tell us what permissions the file's owner has.
@@ -165,7 +165,7 @@ Here, the owner can read, write, and execute the file: `rwx`.
 The middle triplet shows us the group's permissions.
 If the permission is turned off, we see a dash, so `r-x` means "read and execute, but not write".
 The final triplet shows us what everyone who isn't the file's owner, or in the file's group, can do.
-In this case, it's 'r-x' again, so everyone on the system can look at the file's contents and run it.
+In this case, it's `r-x` again, so everyone on the system can look at the file's contents and run it.
 
 To change permissions, we use the `chmod` command
 (whose name stands for "change mode").
@@ -194,7 +194,7 @@ $ chmod u=rw final.grd
 ~~~
 {: .bash}
 
-The 'u' signals that we're changing the privileges
+The `u` signals that we're changing the privileges
 of the user (i.e., the file's owner),
 and `rw` is the new set of permissions.
 A quick `ls -l` shows us that it worked,
@@ -224,10 +224,10 @@ $ ls -l final.grd
 {: .output}
 
 And finally,
-let's give "all" (everyone on the system who isn't the file's owner or in its group) no permissions at all:
+let's give "other" (everyone on the system who isn't the file's owner or in its group) no permissions at all:
 
 ~~~
-$ chmod a= final.grd
+$ chmod o= final.grd
 $ ls -l final.grd
 ~~~
 {: .bash}
@@ -238,9 +238,9 @@ $ ls -l final.grd
 {: .output}
 
 Here,
-the 'a' signals that we're changing permissions for "all",
-and since there's nothing on the right of the "=",
-"all"'s new permissions are empty.
+the `o` signals that we're changing permissions for "other",
+and since there's nothing on the right of the `=`,
+"other"'s new permissions are empty.
 
 We can search by permissions, too.
 Here, for example, we can use `-type f -perm -u=x` to find files
@@ -275,13 +275,13 @@ drwxr-xr-x 1 vlad bio  8192  2010-08-27 23:11 ..
 ~~~
 {: .output}
 
-The permissions for `.` and `..` (this directory and its parent) start with a 'd'.
+The permissions for `.` and `..` (this directory and its parent) start with a `d`.
 But look at the rest of their permissions:
-the 'x' means that "execute" is turned on.
+the `x` means that "execute" is turned on.
 What does that mean?
 A directory isn't a program&mdash;how can we "run" it?
 
-In fact, 'x' means something different for directories.
+In fact, `x` means something different for directories.
 It gives someone the right to *traverse* the directory, but not to look at its contents.
 The distinction is subtle, so let's have a look at an example.
 Vlad's home directory has three subdirectories called `venus`, `mars`, and `pluto`:
@@ -290,12 +290,12 @@ Vlad's home directory has three subdirectories called `venus`, `mars`, and `plut
 
 Each of these has a subdirectory in turn called `notes`,
 and those sub-subdirectories contain various files.
-If a user's permissions on `venus` are 'r-x',
+If a user's permissions on `venus` are `r-x`,
 then if she tries to see the contents of `venus` and `venus/notes` using `ls`,
 the computer lets her see both.
-If her permissions on `mars` are just 'r--',
+If her permissions on `mars` are just `r--`,
 then she is allowed to read the contents of both `mars` and `mars/notes`.
-But if her permissions on `pluto` are only '--x',
+But if her permissions on `pluto` are only `--x`,
 she cannot see what's in the `pluto` directory:
 `ls pluto` will tell her she doesn't have permission to view its contents.
 If she tries to look in `pluto/notes`, though, the computer will let her do that.

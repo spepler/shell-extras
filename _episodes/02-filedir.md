@@ -68,6 +68,8 @@ which is Nelle's **home directory**:
 > In future examples, we've used Mac output as the default - Linux and Windows
 > output may differ slightly but should be generally similar.
 >
+> On JASMIN, users' home directories are under `/home/users`.
+>
 > We will also assume that your `pwd` command returns your user's home directory.
 > If `pwd` returns something different, you may need to navigate there using `cd`
 > or some commands in this lesson will not work as written.
@@ -178,6 +180,7 @@ are plain old **files**.
 > If your screen gets too cluttered, you can clear your terminal using the
 > `clear` command. You can still access previous commands using <kbd>↑</kbd>
 > and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
+> You can also clear your terminal by pressing <kbd>ctrl</kbd>-<kbd>L</kbd>.
 {: .callout}
 
 ### Getting help
@@ -745,7 +748,7 @@ using the term *option*.
 
 Each part is separated by spaces: if you omit the space
 between `ls` and `-F` the shell will look for a command called `ls-F`, which
-doesn't exist. Also, capitalization can be important.
+doesn't exist. Also, capitalization is important.
 For example, `ls -s` will display the size of files and directories alongside the names,
 while `ls -S` will sort the files and directories by size, as shown below:
 

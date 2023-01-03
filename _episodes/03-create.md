@@ -91,14 +91,17 @@ $ ls -F thesis
 ~~~
 {: .language-bash}
 
-Note that `mkdir` is not limited to creating single directories one at a time.
-The `-p` option allows `mkdir` to create a directory with nested subdirectories
-in a single operation:
+Note that `mkdir` is not limited to creating single directories one at a time:
+you can use more than one directory argument.
+Also, the `-p` option (or `--parents`) allows `mkdir` to create a directory with nested subdirectories
+in a single operation. Putting these together, we can do:
 
 ~~~
 $ mkdir -p ../project/data ../project/results
 ~~~
 {: .language-bash}
+Both `../project/data` and `../project/results` are created, and also `../project` 
+is created automatically if needed because we used the `-p` option.
 
 The `-R` option to the `ls` command will list all nested subdirectories within a directory.
 Let's use `ls -FR` to recursively list the new directory hierarchy we just created in the
@@ -154,7 +157,7 @@ data/  results/
 >    expected and can even result in data loss.
 >
 > If you need to refer to names of files or directories that have spaces
-> or other special characters, you should surround the name in quotes (`""`).
+> or other special characters, you should surround the name in quotes (`''`).
 {: .callout}
 
 ### Create a text file
@@ -221,6 +224,16 @@ return to the shell.
 > In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
 > This means that you can use `Control-G` to get help and `Control-O` to save your
 > file.
+>
+> ## Meta Key
+> 
+> The help that you obtain using `Control-G` includes a full list of keyboard shortcuts,
+> of which the ones at the bottom of the screen are only a small selection.  Many of these 
+> use the control key, as in the above examples, but there are some that are shown using 
+> `M-` (for "meta") e.g. `M-/` to go to the last line of the file. Typically this means that you would 
+> press <kbd>Esc</kbd>, then release it and press the other key, e.g. <kbd>Esc</kbd> <kbd>/</kbd>, although 
+> depending on your setup, it might work if instead you press the other key while holding down <kbd>Alt</kbd>.
+
 {: .callout}
 
 `nano` doesn't leave any output on the screen after it exits,
@@ -540,7 +553,7 @@ quotations.txt
 > > Recall that `..` means 'go up a level', so the copied file is now in `/Users/jamie`.
 > > Notice that `..` is interpreted with respect to the current working
 > > directory, **not** with respect to the location of the file being copied.
-> > So, the only thing that will show using ls (in `/Users/jamie/data`) is the recombined folder.
+> > So, the only thing that will show using ls (in `/Users/jamie/data`) is the `recombined` folder.
 > >
 > > 1. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
 > > 2. Yes
@@ -967,45 +980,61 @@ or specifying a naming pattern using wildcards.
 > you how to use them. This can mean you accidentilly get stuck in the editor!  
 > The default editor used by some commands means you need to know how to get out of them sometimes. 
 > If you are not used to them you can get stuck.
-> Emacs – get out with ^X ^C   (maybe need ^G^X^C)
-> Vi – get out by pressing the <kbd>esc</kbd>, then <kbd>:</kbd>,  then <kbd>q</kbd><kbd>!</kbd> <kbd>enter</kbd>. 
+> - Emacs – get out with ^X ^C   (maybe need ^G^X^C)
+> - Vi – get out by pressing the <kbd>esc</kbd>, then <kbd>:</kbd>,  then <kbd>q</kbd><kbd>!</kbd> <kbd>enter</kbd>. 
 {: .callout}
 
 > ## Pattern matching: globs
 > 
 > Unix shells recognises various wildcards in filenames. We have seen these two:
-> * matches any number of characters
-> ? matches one character
+> - `*` matches any number of characters
+> - `?` matches one character
+> 
 > These filename matching patterns, known as "globs", are replaced with a list of matching filenames before the command is executed.
 > ~~~
 > $ ls
-> 1	3	5	a1	b1	c1	d1
->   4	a	b	c	d
 > ~~~
 > {: .language-bash}
+> ~~~
+> 1  3  4  5  a  a1  b  b1  c  c1  d  d1
+> ~~~
+> {: .output}
 > ~~~
 > $ ls *1
-> a1 b1	c1	d1
 > ~~~
 > {: .language-bash}
+> ~~~
+> 1  a1  b1  c1  d1
+> ~~~
+> {: .output}
 > ~~~
 > $ ls ??
-> a1 b1 c1	d1
 > ~~~
 > {: .language-bash}
+> ~~~
+> a1  b1  c1  d1
+> ~~~
+> {: .output}
 > 
 > Here is another glob for you
-> […] matches any of the characters listed (or range of characters, e.g. [0-9])
+> `[`…`]` matches any of the characters listed (or range of characters, e.g. `[0-9]`)
 > 
+> ~~~
 > $ ls [a-c]*
-> a a1 b b1 c c1
+> ~~~
+> {: .language-bash}
+> ~~~
+> a  a1  b  b1  c  c1
+> ~~~
+> {: .output}
+> 
 > 
 > And another glob
-> {fred, barny, wilma} matches any of the comma separated names listed.
-> For example ls *.{jpg,png} will list all your jpg and png files.
+> `{fred, barny, wilma}` matches any of the comma separated names listed.
+> For example `ls *.{jpg,png}` will list all your jpg and png files.
 > 
 > 
-> Use glob matching in acsoe/freetex-98/jungfrau
+> Use glob matching in `acsoe/freetex-98/jungfrau`
 > Make a for loop that word counts only files from that date range 
 > 
 {: .callout}

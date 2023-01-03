@@ -28,7 +28,7 @@ As such they are key to productivity improvements through automation.
 Similar to wildcards and tab completion, using loops also reduces the
 amount of typing required (and hence reduces the number of typing mistakes).
 
-Suppose we have several hundred genome data files named `basilisk.dat`, `minotaur.dat`, and
+Suppose we have several hundred genome data files with names like `basilisk.dat`, `minotaur.dat`, and
 `unicorn.dat`.
 For this example, we'll use the `exercise-data/creatures` directory which only has three
 example files,
@@ -367,6 +367,12 @@ or a subset of data.
 > > 3 is the correct answer. `>>` appends to a file, rather than overwriting it with the redirected
 > > output from a command.
 > > Given the output from the `cat` command has been redirected, nothing is printed to the screen.
+> > 
+> > If the `all.pdb` already existed before the loop was executed, then its original contents would remain 
+> > at the start of the file.
+> > If this behaviour is not desirable, then adding `rm -f all.pdb` could be added at the start
+> > of the program, before the `for` loop.
+> > This would ensure that any existing `all.pdb` file is removed first.
 > {: .solution}
 {: .challenge}
 
@@ -670,7 +676,7 @@ NENE01736A.txt
 {: .output}
 
 1518 times 5 seconds,
-divided by 60,
+divided by 3600,
 tells her that her script will take about two hours to run.
 As a final check,
 she opens another terminal window,
@@ -773,7 +779,8 @@ so she decides to get some coffee and catch up on her reading.
 > > `cat cubane.pdb`, `cat ethane.pdb`, `cat methane.pdb` etc.
 > >
 > > Try both versions for yourself to see the output! Be sure to open the
-> > `all.pdb` file to view its contents.
+> > `all.pdb` file to view its contents. You may wish to delete `all.pdb` before
+> > trying version 2, to remove the output that was added by version 1.
 > {: .solution}
 {: .challenge}
 

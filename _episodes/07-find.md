@@ -29,7 +29,7 @@ It is also the name of a very useful command-line program.
 For our examples,
 we will use a file that contains three haiku taken from a
 1998 competition in *Salon* magazine. For this set of examples,
-we're going to be working in the writing subdirectory:
+we're going to be working in the `writing` subdirectory:
 
 ~~~
 $ cd
@@ -213,7 +213,7 @@ $ grep -n -w -v "the" haiku.txt
 If we use the `-r` (recursive) option,
 `grep` can search for a pattern recursively through a set of files in subdirectories.
 
-Let's search recursively for `Yesterday` in the `shell-lesson-data/exercise-data/writing` directory:
+Let's search recursively for `Yesterday` in the `shell-lesson-data/exercise-data/writing` directory. (Recall that `.` means the current directory.)
 
 ```
 $ grep -r Yesterday .
@@ -285,7 +285,7 @@ Miscellaneous:
 > these is **regular expressions**, which
 > is what the 're' in 'grep' stands for.) Regular expressions are both complex
 > and powerful; if you want to do complex searches, please look at the lesson
-> on [our website](http://v4.software-carpentry.org/regexp/index.html). As a taster, we can
+> on [the Software Carpentry website](http://v4.software-carpentry.org/regexp/index.html). As a taster, we can
 > find lines that have an 'o' in the second position like this:
 >
 > ~~~
@@ -325,8 +325,8 @@ Miscellaneous:
 > ~~~
 > {: .source}
 >
-> She wants to write a shell script that takes a species as the first command-line argument
-> and a directory as the second argument. The script should return one file called `<species>.txt`
+> She wants to write a shell script that takes a species (for example `rabbit`) as the first command-line argument
+> and a directory (for example `.`) as the second argument. The script should return one file called `<species>.txt`
 > containing a list of dates and the number of that species seen on each date.
 > For example using the data shown above, `rabbit.txt` would contain:
 >
@@ -489,7 +489,7 @@ $ find .
 ./proteins/cubane.pdb
 ~~~
 {: .output}
-
+(You should see something similar, but not necessarily in the same order.)
 
 As always, the `.` on its own means the current working directory,
 which is where we want our search to start.
@@ -664,7 +664,7 @@ $ grep "searching" $(find . -name "*.txt")
 > 4.  None of the above.
 >
 > > ## Solution
-> > Option 1. is correct. Putting the match expression in quotes prevents the shell
+> > Option 1 is correct. Putting the match expression in quotes prevents the shell
 > > expanding it, so it gets passed to the `find` command.
 > >
 > > Option 2 is also works in this instance because the shell tries to expand `*.dat`
@@ -693,7 +693,7 @@ $ grep "searching" $(find . -name "*.txt")
 > formulas?
 >
 > A last option is to recognize that the shell and text processing have
-> their limits, and to use another programming language.
+> their limits, and to use another programming language when appropriate.
 > When the time comes to do this, don't be too hard on the shell: many
 > modern programming languages have borrowed a lot of
 > ideas from it, and imitation is also the sincerest form of praise.
@@ -722,7 +722,7 @@ without thinking about them.'
 > > ## Solution
 > > 1. Find all files with a `.dat` extension recursively from the current directory
 > > 2. Count the number of lines each of these files contains
-> > 3. Sort the output from step 2. numerically
+> > 3. Sort the output from step 2 numerically
 > {: .solution}
 {: .challenge}
 
