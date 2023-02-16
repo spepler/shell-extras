@@ -12,6 +12,7 @@ keypoints:
 - "Course logistics."
 ---
 
+
 ### Using Software Carpentry 
 
 The lessons are in episodes. 
